@@ -1,0 +1,11 @@
+services:
+    - type: worker
+    name: naijagpt
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+            - key: TOKEN
+        sync: false
+            - key: OPENROUTER_KEY
+        sync: false
